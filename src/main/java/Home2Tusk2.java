@@ -1,5 +1,3 @@
-package org.example;
-
 public class Home2Tusk2 {
     public static void main(String[] args) {
 
