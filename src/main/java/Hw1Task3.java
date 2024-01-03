@@ -1,4 +1,4 @@
-public class HomeTusk3 {
+public class Hw1Task3 {
     public static void main(String[] args) {
         int a = 5;
         int b = 3;
