@@ -1,4 +1,4 @@
-public class Hw2Tusk2 {
+public class Hw2Task2 {
     public static void main(String[] args) {
 
         double x1 = 1.0;

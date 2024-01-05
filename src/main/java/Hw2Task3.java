@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Hw2Tusk3 {
+public class Hw2Task3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

@@ -1,4 +1,4 @@
-public class Hw2Tusk4 {
+public class Hw2Task4 {
     public static void main(String[] args) {
         int a = -5;
         int b = 7;
