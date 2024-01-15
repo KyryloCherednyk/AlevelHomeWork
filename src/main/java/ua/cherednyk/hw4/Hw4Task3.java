@@ -32,7 +32,7 @@ public class Hw4Task3 {
         System.out.println();
     }
 
-    private static int[] replaceEvenWithZeros(int[] array) {
+    public static int[] replaceEvenWithZeros(int[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 array[i] = 0;
