@@ -37,7 +37,7 @@ public class Hw4Task1 {
     }
 
     public static double calculateGeometricMean(int[] array) {
-        int product = 1;
+        double product = 1;
         for (int element : array) {
             product *= element;
         }
