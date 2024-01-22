@@ -27,16 +27,6 @@ public class Hw5Task3 {
         return array;
     }
 
-    public static int[][] copyArray(int[][] array) {
-        int rows = array.length;
-        int cols = array[0].length;
-        int[][] copy = new int[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            copy[i] = Arrays.copyOf(array[i], cols);
-        }
-        return copy;
-    }
-
     public static int[][] transformArray(int[][] array) {
         int rows = array.length;
         int cols = array[0].length;
