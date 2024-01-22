@@ -55,13 +55,13 @@ public class Phone {
         System.out.println("\nИнформация о телефоне 3:");
         phone3.displayInfo();
 
-        phone1.receiveCall("Анна");
+        phone1.receiveCall("Полина");
         System.out.println("Номер телефона: " + phone1.getNumber());
 
-        phone2.receiveCall("Петр");
+        phone2.receiveCall("Евгения");
         System.out.println("Номер телефона: " + phone2.getNumber());
 
-        phone3.receiveCall("Мария");
+        phone3.receiveCall("Дмитрий");
         System.out.println("Номер телефона: " + phone3.getNumber());
     }
 }
