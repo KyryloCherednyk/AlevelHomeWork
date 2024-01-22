@@ -48,11 +48,12 @@ public class Hw5Task2 {
     }
 
     public static boolean checkDescendingOrder(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 1; j < array[i].length; j++) {
-                if (array[i][j - 1] < array[i][j]) {
-                    return false;
-                }
+        for (int i = 1; i < array.length; i++) {
+            int lastElementPrevRow = array[i - 1][array[i - 1].length - 1];
+            int firstElementCurrRow = array[i][0];
+
+            if (lastElementPrevRow < firstElementCurrRow) {
+                return false;
             }
         }
         return true;
