@@ -10,8 +10,7 @@ public class Hw4Task3 {
         generateRandomArray(array);
         System.out.println("Исходный массив:");
         printArray(array);
-        int[] modifiedArray = Arrays.copyOf(array, array.length);
-        modifiedArray = replaceEvenWithZeros(modifiedArray);
+        int[] modifiedArray = replaceEvenWithZeros(array);
         System.out.println("Измененный массив:");
         printArray(modifiedArray);
         System.out.println("Проверка исходного массива:");
@@ -33,11 +32,12 @@ public class Hw4Task3 {
     }
 
     public static int[] replaceEvenWithZeros(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 0) {
-                array[i] = 0;
+        int[] newArray = Arrays.copyOf(array, array.length);
+        for (int i = 0; i < newArray.length; i++) {
+            if (newArray[i] % 2 == 0) {
+                newArray[i] = 0;
             }
         }
-        return array;
+        return newArray;
     }
 }
