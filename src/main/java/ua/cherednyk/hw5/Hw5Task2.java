@@ -62,11 +62,16 @@ public class Hw5Task2 {
 
     // Метод для двумерных массивов
     public static boolean isDescending(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 1; j < array[i].length; j++) {
-                if (array[i][j - 1] < array[i][j]) {
-                    return false;
-                }
+        int totalElements = array.length * array[0].length;
+
+        for (int i = 1; i < totalElements; i++) {
+            int currentRow = i / array[0].length;
+            int currentCol = i % array[0].length;
+            int previousRow = (i - 1) / array[0].length;
+            int previousCol = (i - 1) % array[0].length;
+
+            if (array[currentRow][currentCol] > array[previousRow][previousCol]) {
+                return false;
             }
         }
         return true;
