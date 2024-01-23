@@ -7,7 +7,11 @@ public class Hw5Task2 {
 
         int[][] originalArray = generateArray(3, 3);
 
-        System.out.println("Исходный массив:");
+        int[] array1 = {1, 2, 3, 4, 5};
+
+        System.out.println("Одномерный масив " + isDescending(array1));
+
+        System.out.println("\nИсходный массив:");
         printArray(originalArray);
 
         int[][] modifiedArray = copyArray(originalArray);
@@ -17,7 +21,7 @@ public class Hw5Task2 {
         System.out.println("Измененный массив:");
         printArray(modifiedArray);
 
-        boolean isDescending = checkDescendingOrder(modifiedArray);
+        boolean isDescending = isDescending(modifiedArray);
 
         System.out.println("Массив упорядочен по убыванию: " + isDescending);
     }
@@ -47,13 +51,22 @@ public class Hw5Task2 {
         }
     }
 
-    public static boolean checkDescendingOrder(int[][] array) {
+    public static boolean isDescending(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            int lastElementPrevRow = array[i - 1][array[i - 1].length - 1];
-            int firstElementCurrRow = array[i][0];
-
-            if (lastElementPrevRow < firstElementCurrRow) {
+            if (array[i - 1] < array[i]) {
                 return false;
+            }
+        }
+        return true;
+    }
+
+    // Метод для двумерных массивов
+    public static boolean isDescending(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 1; j < array[i].length; j++) {
+                if (array[i][j - 1] < array[i][j]) {
+                    return false;
+                }
             }
         }
         return true;
