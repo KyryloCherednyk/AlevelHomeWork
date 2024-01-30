@@ -1,7 +1,7 @@
 package ua.cherednyk.hw7;
 
 import java.util.Random;
-//HW
+//HW7
 public class Vector3d {
     public double x;
     public double y;
