@@ -3,7 +3,9 @@ package ua.cherednyk.hw7;
 import java.util.Random;
 
 public class Vector3d {
-    public double x, y, z;
+    public double x;
+    public double y;
+    public double z;
 
     public Vector3d(double x, double y, double z) {
         this.x = x;
