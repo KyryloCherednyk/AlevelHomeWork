@@ -51,3 +51,4 @@ public class Hw5Task1 {
         }
     }
 }
+//1
