@@ -14,13 +14,11 @@ public class Task2 {
             g();
         } catch (CustomException1 ce1) {
             System.out.println("Перехвачено исключение CustomException1 в методе f: " + ce1.getMessage());
-            // Бросаем другое исключение
             throw new CustomException2("Исключение CustomException2 из метода f", ce1);
         }
     }
 
     public static void g() throws CustomException1 {
-        // Генерируем исключение CustomException1
         throw new CustomException1("Исключение CustomException1 из метода g");
     }
 }
