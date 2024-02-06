@@ -1,5 +1,6 @@
 package ua.cherednyk.hw10;
 
+import java.util.Objects;
 import java.util.Optional;
 
 public class PhoneBook {
@@ -21,7 +22,7 @@ public class PhoneBook {
 
     public static Optional<Integer> findIndexByPhoneNumber(String phoneNumber) {
         for (int i = 0; i < PHONE_BOOK.length; i++) {
-            if (PHONE_BOOK[i] != null && PHONE_BOOK[i].equals(phoneNumber)) {
+            if (Objects.equals(PHONE_BOOK[i], phoneNumber)) {
                 return Optional.of(i);
             }
         }
