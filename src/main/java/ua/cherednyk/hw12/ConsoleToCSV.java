@@ -14,19 +14,25 @@ public class ConsoleToCSV {
             while (true) {
                 String input = scanner.nextLine();
                 if ("end".equals(input)) {
-                    lines.add(currentLine.trim());
+                    if (!currentLine.isEmpty()) {
+                        lines.add(currentLine.trim());
+                    }
                     break;
                 } else if ("next".equals(input)) {
                     lines.add(currentLine.trim());
                     currentLine = "";
                 } else {
-                    currentLine += input + ", ";
+                    currentLine += input.trim() + ", ";
                 }
             }
         }
 
         try (FileWriter writer = new FileWriter("output.csv")) {
-            for (String line : lines) {
+            for (int i = 0; i < lines.size(); i++) {
+                String line = lines.get(i);
+                if (i == lines.size() - 1) {
+                    line = line.substring(0, line.length() - 1);
+                }
                 writer.write(line + "\n");
             }
         } catch (IOException e) {
