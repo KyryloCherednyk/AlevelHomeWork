@@ -1,6 +1,6 @@
 package ua.cherednyk.hw9;
 
-
+//
 public class ExceptionExample {
     public static void main(String[] args) {
         try {
