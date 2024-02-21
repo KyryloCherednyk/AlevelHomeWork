@@ -1,5 +1,5 @@
 package ua.cherednyk.hw15;
-
+//
 public class A {
     private String id = "123";
     private String name = "A";
